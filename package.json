@@ -34,5 +34,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "abab": "^2.0.6",
+    "babel-eslint": "^10.1.0",
+    "chokidar": "^3.5.3",
+    "html-webpack-plugin": "^5.6.0",
+    "resolve-url": "^0.2.1",
+    "w3c-hr-time": "^1.0.2"
   }
 }
