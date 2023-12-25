@@ -1,6 +1,6 @@
 import "./app-filter.css";
 
-const AppFilter = (props) => {
+const AppFilter = ({filter, onFilterSelect}) => {
     const buttonsData = [
         {name: 'all',label: 'Все сотрудники'},
         {name: 'rise',label: 'На повышение'},
@@ -8,7 +8,7 @@ const AppFilter = (props) => {
     ];
 
     const buttons = buttonsData.map(({name, label}) => {
-        const active = props.filter === name;
+        const active = filter === name;
 
         const clazz = active ? 'btn-light' : 'btn-outline-light'
 
@@ -16,7 +16,7 @@ const AppFilter = (props) => {
             <button type="button"
                     className={`btn ${clazz}`}
                     key={name}
-                    onClick={() => props.onFilterSelect(name)}>
+                    onClick={() => onFilterSelect(name)}>
                     {label}
             </button>
         )
